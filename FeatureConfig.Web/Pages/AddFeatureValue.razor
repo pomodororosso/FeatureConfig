@@ -1,0 +1,39 @@
+﻿@page "/addFeatureValue"
+@inject IFeatureRepository featureRepository
+@inject Microsoft.AspNetCore.Components.NavigationManager navigationManager
+<h1>
+    Add FeatureValue
+</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="Name" class="control-label">Name</label>
+                <input for="Name" class="form-control" @bind-value="@featureValue.Name" />
+                <label for="Value" class="control-label">Value</label>
+                <input for="Value" class="form-control" @bind-value="@featureValue.Value" />
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" @onclick="() => CreateFeatureValue()">Save</button>
+                <button type="button" class="btn btn-danger" @onclick="() => cancel()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@code {
+
+    FeatureValue featureValue = new FeatureValue();
+
+    protected async Task CreateFeatureValue()
+    {
+        await featureRepository.Create(featureValue);
+        navigationManager.NavigateTo("/featureValuelist");
+    }
+
+    void cancel()
+    {
+        navigationManager.NavigateTo("/featureValuelist");
+    }
+}
