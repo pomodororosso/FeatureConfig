@@ -1,8 +1,8 @@
-﻿using FeatureConfig.Web.Entities;
+﻿using FeatureConfig.Data.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace FeatureConfig.Web.Contracts
+namespace FeatureConfig.Data
 {
     public interface IFeatureRepository
     {

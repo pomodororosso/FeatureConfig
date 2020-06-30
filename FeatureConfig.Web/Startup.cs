@@ -1,17 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
-using FeatureConfig.Web.Contracts;
-using FeatureConfig.Web.Concrete;
+using FeatureConfig.Data;
 
 namespace FeatureConfig.Web
 {
@@ -28,9 +20,6 @@ namespace FeatureConfig.Web
             services.AddRazorPages();
             services.AddServerSideBlazor();
 
-            services.AddDbContext<DataAccess.AppContext>(options =>
-                          options.UseSqlServer(
-                              Configuration.GetConnectionString("DefaultConnection")));
             //FeatureValue service  
             services.AddScoped<IFeatureRepository, FeatureRepository>();
             //Register dapper in scope  

@@ -1,5 +1,4 @@
-﻿using FeatureConfig.Web.Contracts;
-using Dapper;
+﻿using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -8,7 +7,7 @@ using System.Data;
 using System.Data.Common;
 using System.Linq;
 
-namespace FeatureConfig.Web.Concrete
+namespace FeatureConfig.Data
 {
     public class DapperManager : IDapperManager
     {

@@ -1,11 +1,10 @@
-﻿using FeatureConfig.Web.Contracts;
-using FeatureConfig.Web.Entities;
-using Dapper;
+﻿using Dapper;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
+using FeatureConfig.Data.Entities;
 
-namespace FeatureConfig.Web.Concrete
+namespace FeatureConfig.Data
 {
     public class FeatureRepository : IFeatureRepository
     {
@@ -13,7 +12,7 @@ namespace FeatureConfig.Web.Concrete
 
         public FeatureRepository(IDapperManager dapperManager)
         {
-            this._dapperManager = dapperManager;
+            _dapperManager = dapperManager;
         }
 
         public Task<int> Create(FeatureValue featureValue)

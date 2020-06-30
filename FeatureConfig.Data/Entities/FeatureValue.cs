@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace FeatureConfig.Web.Entities
+namespace FeatureConfig.Data.Entities
 {
     public class FeatureValue
     {

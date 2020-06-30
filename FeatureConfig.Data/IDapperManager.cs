@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 
-namespace FeatureConfig.Web.Contracts
+namespace FeatureConfig.Data
 {
     public interface IDapperManager : IDisposable
     {
