@@ -35,11 +35,11 @@
     protected async Task UpdateFeatureValue()
     {
         await featureRepository.Update(featureValueEntity);
-        navigationManager.NavigateTo("/featureValuelist");
+        navigationManager.NavigateTo("/features");
     }
 
     void cancel()
     {
-        navigationManager.NavigateTo("/featureValuelist");
+        navigationManager.NavigateTo("/features");
     }
 }

@@ -110,6 +110,14 @@ app {
     color: red;
 }
 
+.bi-pencil-square:hover {
+    fill: blue;
+}
+
+.bi-trash:hover {
+    fill: red;
+}
+
 @media (max-width: 767.98px) {
     .main .top-row {
         display: none;

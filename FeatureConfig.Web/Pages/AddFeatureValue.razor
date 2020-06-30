@@ -29,11 +29,11 @@
     protected async Task CreateFeatureValue()
     {
         await featureRepository.Create(featureValue);
-        navigationManager.NavigateTo("/featureValuelist");
+        navigationManager.NavigateTo("/features");
     }
 
     void cancel()
     {
-        navigationManager.NavigateTo("/featureValuelist");
+        navigationManager.NavigateTo("/features");
     }
 }
